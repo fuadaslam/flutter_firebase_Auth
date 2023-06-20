@@ -32,7 +32,7 @@ class _UserListState extends State<UserList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 1000,
+            height: MediaQuery.of(context).size.height ,
       child: Padding(
         padding: const EdgeInsets.all(25),
         child: Column(
@@ -46,7 +46,7 @@ class _UserListState extends State<UserList> {
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           childAspectRatio: MediaQuery.of(context).size.width /
-                              (MediaQuery.of(context).size.height / 1.358)),
+                              (MediaQuery.of(context).size.height / - 220)),
                       itemBuilder: (context, index) {
                         return Card(
                           key: ValueKey(_items[index]["Email"]),
